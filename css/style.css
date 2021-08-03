@@ -5,3 +5,148 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: #C0C0C0;
+}
+
+.container {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: 100vH;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button:hover,
+.task:hover {
+    cursor: pointer;
+}
+
+/* TASK FORM */
+
+.task-form {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.task-form h1 {
+    color: white;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    background: gray;
+    width: 90%;
+}
+
+input[type="text"] {
+    width: 80%;
+    height: 33px;
+    border: 1px solid black;
+    border-right: none;
+    padding-left: 10px;
+}
+
+input[type="text"]:focus {
+    outline:none;
+}
+
+form button {
+    width: 20%;
+    outline:none;
+    bordeR: 1px solid black;
+    border-left:none;
+    color: #7B7B7B;
+}
+
+/* TASK LIST */
+
+.task-list {
+    width: 100%;
+    height: 70%;
+}
+
+.task {
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: 1px solid gray;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+}
+
+.task:hover{
+    background: #EEEEEE;
+    transition: 0.3s ease;
+}
+
+.completed,
+.completed:hover {
+    background: #368081;
+}
+
+.taskState,
+.taskRemove {
+    height: 100%;
+    width: 40px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskState {
+    visibility: hidden;
+}
+
+.completed .taskState {
+    visibility: visible;
+    color: white;
+}
+
+.task p {
+    margin-left: 10px;
+}
+
+.completed p {
+    text-decoration: line-through;
+    color: white;
+}
+
+.taskRemove {
+    position: absolute;
+}
+
+.fa-times {
+    padding: 13px;
+}
+
+.taskRemove .fas:hover {
+    cursor: pointer;
+}
+
+.completed .taskRemove {
+    color: white;
+}
+
+/* REMOVE BUTTON */
+
+.total-remove-btn {
+    width: 35%;
+    margin: 25px auto;
+    font-size: 25px;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
