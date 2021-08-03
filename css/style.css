@@ -72,6 +72,8 @@ form button {
 .task-list {
     width: 100%;
     height: 70%;
+    overflow-y:auto;
+    margin-top:0;
 }
 
 .task {
